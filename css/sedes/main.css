@@ -1,0 +1,202 @@
+.cont_presentacion{
+    background-color: var(--colorFondoSlider);
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cont_presentacion .cont_linea{
+    width: auto;
+    height: auto;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.cont_presentacion .cont_linea .linea1{
+    background-color: var(--colorLinea);
+    width: 70px;
+    height: 8px;
+    border-radius: 10px;
+}
+.cont_presentacion .cont_linea .linea2{
+    background-color: var(--colorLinea);
+    width: 50px;
+    height: 8px;    
+    border-radius: 10px;
+}
+.cont_presentacion h2{
+    font-size: 2.8rem;
+}
+
+
+
+.contenedor_institucion{
+    width: 90%;
+    max-width: 1500px;
+    height: auto;
+    margin: auto;
+    margin-bottom: 50px;
+}
+.cont_instituto{
+    position: relative;
+    top: 50px;
+    background-color: var(--colorFondo);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.cont_instituto .cont_linea{
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+.cont_instituto .cont_linea .linea1{
+    background-color: var(--colorLinea);
+    width: 50px;
+    height: 6px;
+    border-radius: 10px;
+}
+.cont_instituto .cont_linea .linea2{
+    background-color: var(--colorLinea);
+    width: 40px;
+    height: 6px;
+    border-radius: 10px;
+}
+.cont_instituto h2{
+    font-size: 2rem;
+}
+
+
+.contenedor_ubicacion{
+    padding-top: 60px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.contenedor_ubicacion .ubicacion{
+    width: 600px;
+    height: 400px;
+}
+.contenedor_ubicacion .cont_horarios h3{
+    border-left: 6px solid var(--colorLinea);
+    height: min-content;
+    padding-left: 10px;
+    margin-bottom: 10px;
+}
+.contenedor_ubicacion .cont_horarios .horarios{
+    display: flex;
+    gap: 20px;
+}
+.contenedor_ubicacion .cont_horarios .horarios p{
+    padding: 10px 0;
+}
+
+
+
+
+
+
+.contenedor_institutosSecundario{
+    width: 80%;
+    max-width: 1300px;
+    height: auto;
+    margin: 0 auto;
+    padding: 50px 0;
+}
+.contenedor_institutosSecundario h3{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
+    border-bottom: 2px solid var(--colorLinea);
+}
+.contenedor_institutosSecundario .sedes_secundarias{
+    height: 400px;
+    display: flex;
+    justify-content: space-around;
+}
+.contenedor_institutosSecundario .sedes_secundarias h2{
+    width: 100%;
+    height: auto;
+    margin: 20px 0;
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
+    border-left: 6px solid var(--colorLinea);
+}
+.contenedor_institutosSecundario .sede{
+    padding-top: 20px;
+    width: 48%;
+}
+
+
+.mapa_escuela{
+    display: flex;
+    width: 90%;
+    margin:  0 auto;
+    height: auto;
+    gap: 10px;
+  }
+.mapa_escuela img{
+    width: 0px;
+    flex-grow: 1;
+    object-fit: cover;
+    opacity: .8;
+    transition: .5s ease;
+  }
+.mapa_escuela img:hover{
+    cursor: crosshair;
+    width: 300px;
+    opacity: 1;
+  }
+.titulo_mapa{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
+    border-bottom: 2px solid var(--colorLinea);
+  }
+
+@media (max-width:1150px) {
+    .cont_instituto h2{
+        font-size: 1rem;
+    }
+    .contenedor_ubicacion{
+        flex-direction: column;
+        align-items: center;
+    }
+    .contenedor_ubicacion .ubicacion{
+        width: 100%;
+    }
+    .contenedor_institutosSecundario .sedes_secundarias{
+        height: auto;
+        justify-content: unset;
+        flex-direction: column;
+    }
+    .contenedor_institutosSecundario .sede{
+        width: 100%;
+        height: 500px;
+        padding-bottom: 70px;
+    }
+    .contenedor_institutosSecundario h3{
+        font-size: 1rem;
+        border: none;
+    }
+    .contenedor_institutosSecundario .sedes_secundarias h2{
+        font-size: 1rem;
+    }
+
+}
+
+
+@media (max-width:930px) {
+    .cont_presentacion h2{
+        font-size: 2rem;
+    }
+}

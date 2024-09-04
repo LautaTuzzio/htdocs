@@ -1,0 +1,228 @@
+.espacio_especialidad{
+    height: 50px;
+}
+.cont_presentacion{
+    background-color: var(--colorFondoSlider);
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cont_presentacion .cont_linea{
+    width: auto;
+    height: auto;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.cont_presentacion .cont_linea .linea1{
+    background-color: var(--colorLinea);
+    width: 70px;
+    height: 8px;
+    border-radius: 10px;
+}
+.cont_presentacion .cont_linea .linea2{
+    background-color: var(--colorLinea);
+    width: 50px;
+    height: 8px;    
+    border-radius: 10px;
+}
+.cont_presentacion h2{
+    font-size: 2.8rem;
+}
+
+
+/* Contacto */
+.contenedor_contacto{
+    height: auto;
+    min-height: calc(100vh - (90px + 100px + 300px + 40px));
+    padding-top: 40px;
+    display: flex;
+    align-items: center;
+}
+.contenedor_contacto .alineacion{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.contacto{
+    width: auto;
+    max-width: 360px;
+    height: max-content;
+}
+.contacto .ubicacion h3, .contacto .redes h3{
+    width: 100%;
+    height: 35px;
+    display: flex;
+    align-items: flex-start;
+    font-size: 1.3rem;
+}
+.contacto .ubicacion p{
+    margin-bottom: 50px;
+}
+.contacto .redes .icons{
+    display: flex;
+    gap: 20px;
+}
+.contacto .redes .icons a{
+    text-decoration: none;
+    color: var(--colorLinea);
+    transition: color .3s ease-in-out;
+}
+.contacto .redes .icons a:hover{
+    color: var(--negro);
+}
+.contacto .redes .icons i{
+    font-size: 1.5rem;
+}
+
+
+form{
+    width: 550px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    --form: #d3d3d3;
+}
+form input{
+    background-color: var(--form);
+    width: 100%;
+    height: 45px;
+    font-size: 1.1rem;
+    font-family: system-ui;
+    border: none;
+    outline: none;
+    padding-left: 20px;
+}
+form .mensaje{
+    background-color: var(--form);
+    width: 100%;
+    height: 160px;
+    font-size: 1.1rem;
+    font-family: system-ui;
+    border: none;
+    outline: none;
+    padding: 15px 20px;
+    resize: none;
+}
+form input[type="submit"]{
+    width: fit-content;
+    height: fit-content;
+    font-size: 1rem;
+    font-family: system-ui;
+    padding: 8px 15px;
+    border: 3px solid var(--colorLinea);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+form input[type="submit"]:hover{
+    box-shadow: 0 1px 10px var(--colorLinea);
+}
+
+
+
+input[type="checkbox"]{
+    display: none;
+}
+#mensajes:checked ~ .contenedor_ventana{
+    display: flex;
+}
+
+.cont_btn{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+.cont_btn .mensajes{
+    color: var(--colorLinea);
+}
+.cont_btn .mensajes:hover{
+    text-decoration: underline;
+}
+
+
+
+.contenedor_ventana{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    height: 100vh;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    --form: #d3d3d3;
+}
+.contenedor_ventana label div{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #0000008e;
+    width: 100%;
+    height: 100%;
+}
+.contenedor_ventana .contenedor_mensajes{
+    position: absolute;
+    background-color: var(--colorFondo);
+    width: 90%;
+    max-width: 1400px;
+    height: 90vh;
+    padding: 30px;
+    overflow-y: scroll;
+}
+.contenedor_mensajes .cont_mensaje{
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    gap: 20px;
+}
+.contenedor_mensajes .carta_mensaje{
+    background-color: var(--form);
+    width: 100%;
+    height: auto;
+    padding: 10px;
+}
+.contenedor_mensajes .carta_mensaje .nombre{
+    width: 100%;
+    height: 30px;
+    font-size: 1.5rem;
+}
+.contenedor_mensajes .carta_mensaje .cont{
+    background-color: rgba(161, 161, 161, 0.4);
+    width: 100%;
+    height: calc(100% - 30px);
+    padding: 10px;
+    color: #000;
+    display: flex;
+    flex-direction: column;
+}
+.contenedor_mensajes .carta_mensaje .cont .texto_mensaje{
+    padding-bottom: 20px;
+}
+
+
+
+@media (max-width:1100px) {
+    .contenedor_contacto .alineacion{
+        flex-direction: column;
+        justify-content: unset;
+        align-items: center;
+        gap: 50px;
+    }
+}
+@media (max-width:930px) {
+    .cont_presentacion h2{
+        font-size: 2rem;
+    }
+}
+@media (max-width:600px) {
+    form{
+        width: 96%;
+    }
+}

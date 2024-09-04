@@ -1,0 +1,118 @@
+.cont_presentacion{
+    background-color: var(--colorFondoSlider);
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cont_presentacion .cont_linea{
+    width: auto;
+    height: auto;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.cont_presentacion .cont_linea .linea1{
+    background-color: var(--colorLinea);
+    width: 70px;
+    height: 8px;
+    border-radius: 10px;
+}
+.cont_presentacion .cont_linea .linea2{
+    background-color: var(--colorLinea);
+    width: 50px;
+    height: 8px;    
+    border-radius: 10px;
+}
+
+.cont_presentacion h2{
+    font-size: 2.8rem;
+}
+
+
+
+.contenedor_inscripciones{
+    width: 80%;
+    max-width: 1300px;
+    height: auto;
+    margin: 50px auto;
+}
+
+.contenedor_inscripciones .cont_razones_para_inscribirse{
+    background-color: var(--fondoInscripciones);
+    width: 100%;
+    height: auto;
+    min-height: 350px;
+    padding: 40px;
+    box-shadow: 15px 15px 1px var(--colorFondoSlider);
+}
+
+.contenedor_inscripciones .cont_razones_para_inscribirse h2{
+    width: 100%;
+    height: 60px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contenedor_inscripciones .cont_razones_para_inscribirse .cont_info{
+    word-wrap: 100%;
+    height: calc(100% - 60px);
+}
+.contenedor_inscripciones .cont_razones_para_inscribirse .cont_info p{
+    font-size: 1.3rem;
+    /* text-align: justify; */
+}
+.contenedor_inscripciones .contenedor_info_inscripcion{
+    width: 100%;
+    display: flex;
+    gap: 40px;
+    padding-top: 40px;
+}
+.contenedor_inscripciones .contenedor_info_inscripcion .cont_informacion{
+    background-color: var(--fondoInscripciones);
+    width: 50%;
+    height: auto;
+    min-height: 400px;
+    padding: 40px;
+    box-shadow: 15px 15px 1px var(--colorFondoSlider);
+}
+.contenedor_inscripciones .contenedor_info_inscripcion .cont_informacion h2{
+    width: 100%;
+    height: 60px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contenedor_inscripciones .contenedor_info_inscripcion .cont_info{
+    word-wrap: 100%;
+    height: calc(100% - 60px);
+}
+.contenedor_inscripciones .contenedor_info_inscripcion .cont_info p{
+    font-size: 1.3rem;
+    /* text-align: justify; */
+}
+@media (max-width:900px) {
+    .contenedor_inscripciones .contenedor_info_inscripcion{
+        flex-direction: column;
+    }
+    .contenedor_inscripciones .contenedor_info_inscripcion .cont_informacion{
+        width: 100%;
+    }
+
+}
+@media (max-width:930px) {
+    .cont_presentacion h2{
+        font-size: 2rem;
+    }
+    .contenedor_inscripciones .contenedor_info_inscripcion .cont_info p{
+        font-size: 1rem;
+    }
+    .contenedor_inscripciones .cont_razones_para_inscribirse .cont_info p{
+        font-size: 1rem;
+    }
+
+}

@@ -1,0 +1,261 @@
+html{
+    scroll-behavior: smooth;
+}
+.espacio_especialidad{
+    height: 50px;
+}
+input[name="especialidad"]{
+    display: none;
+}
+
+.cont-icon{
+    display: none;
+}
+
+.cont_presentacion{
+    background-color: var(--colorFondoSlider);
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cont_presentacion .cont_linea{
+    width: auto;
+    height: auto;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.cont_presentacion .cont_linea .linea1{
+    background-color: var(--colorLinea);
+    width: 70px;
+    height: 8px;
+    border-radius: 10px;
+}
+.cont_presentacion .cont_linea .linea2{
+    background-color: var(--colorLinea);
+    width: 50px;
+    height: 8px;
+    border-radius: 10px;
+}
+.cont_presentacion h2{
+    font-size: 2.8rem;
+}
+
+
+
+/* Estilos de las especialidades */
+.cont_btn_epecialidad{
+    width: 80%;
+    max-width: 1300px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+}
+.cont_btn_epecialidad .especialidad{
+    position: relative;
+    top: -20px;
+    background-color: var(--colorFondo);
+    width: fit-content;
+    height: 60px;
+    padding: 25px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: color .5s ease;
+    transition: background-color .3s ease-out;
+}
+.cont_btn_epecialidad .especialidad:hover{
+    box-shadow: -1px 2px 10px black;
+}
+.cont_btn_epecialidad .cont_linea{
+    width: 40px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    transition: color .5s ease;
+}
+.cont_btn_epecialidad .cont_linea .linea1{
+    background-color: var(--colorLinea);
+    width: 20px;
+    height: 6px;
+    border-radius: 10px;
+}
+.cont_btn_epecialidad .cont_linea .linea2{
+    background-color: var(--colorLinea);
+    width: 20px;
+    height: 6px;
+    border-radius: 10px;
+    transition: width .5s ease;
+}
+.cont_btn_epecialidad .especialidad h3{
+    font-size: 2rem;
+}
+
+
+
+/* Estilos para la funcionalidad de los botones */
+#programacion:checked ~ .cont_btn_epecialidad .programacion, #electronica:checked ~ .cont_btn_epecialidad .electronica{
+    background-color: var(--colorBtnMenu);
+    color: var(--colorFondo);
+    /* text-shadow: 0 0 10px var(--colorFondo); */
+}
+#programacion:checked ~ .cont_btn_epecialidad .programacion .cont_linea .linea1, #electronica:checked ~ .cont_btn_epecialidad .electronica .cont_linea .linea1{
+    width: 40px;
+    box-shadow: 0 0 5px var(--colorLinea);
+}
+#programacion:checked ~ .cont_btn_epecialidad .programacion .cont_linea .linea2, #electronica:checked ~ .cont_btn_epecialidad .electronica .cont_linea .linea2{
+    width: 30px;
+    box-shadow: 0 0 5px var(--colorLinea);
+}
+
+.contenedor_programacion, .contenedor_electronica{
+    width: 80%;
+    max-width: 1300px;
+    display: none;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+.contenedor_programacion .nav_lateral, .contenedor_electronica .nav_lateral{
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+.contenedor_programacion .nav_lateral a, .contenedor_electronica .nav_lateral a{
+    width: 80%;
+    height: 40px;
+    border: 3px solid var(--colorLinea);
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--negro);
+    transition: all .5s ease;
+}
+.nav_lateral a:hover{
+    background-color: #acb7c0;
+}
+.contenedor_programacion .contenido, .contenedor_electronica .contenido{
+    width: calc(100% - 400px);
+    height: calc(100vh - 400px);
+    overflow-y: scroll;
+    padding: 0 20px;
+}
+#programacion:checked ~ .contenedor_programacion, #electronica:checked ~ .contenedor_electronica{
+    display: flex;
+}
+.contenedor_programacion #objetivoProg, #materiasProg, #docentesProg{
+    width: 100%;
+    height: auto;
+}
+.contenedor_programacion h3, .contenedor_electronica h3{
+    width: 100%;
+    padding-left: 20px;
+    border-left: 5px solid var(--colorLinea);
+}
+
+.contenido #objetivoProg, #objetivoElec{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+#objetivoProg .cont, #objetivoElec .cont{
+    width: calc(100% - 400px);
+    text-align: justify;
+}
+.cont{
+    padding-bottom: 30px;
+}
+#objetivoProg img, #objetivoElec img{
+    background-color: black;
+    width: 400px;
+    height: 230px;
+}
+
+
+
+
+@media (max-width:1500px){
+    .contenido #objetivoProg, #objetivoElec{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #objetivoProg .cont, #objetivoElec .cont{
+        width: 100%;
+        text-align: justify;
+    }
+    #objetivoProg img, #objetivoElec img{
+        margin-bottom: 50px;
+    }   
+}
+
+
+@media (max-width:1150px) {
+    .contenedor_programacion .nav_lateral, .contenedor_electronica .nav_lateral{
+        display: none;
+    }
+    .contenedor_programacion .contenido, .contenedor_electronica .contenido{
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+        overflow: unset;
+    }   
+}
+
+
+@media (max-width:930px) {
+    .especialidad .cont_linea, .especialidad h3{
+        display: none;
+    }
+    .cont_btn_epecialidad{
+        position: fixed;
+        right: 0;
+        bottom: 100px;
+        width: auto;
+        height: auto;
+        flex-direction: column;
+        margin: unset;
+        gap: 20px;
+        justify-content: unset;
+    }
+    .cont_btn_epecialidad .especialidad{
+        width: 50px;
+        height: 50px;
+        padding: unset;
+        border-radius: 50%;
+    }
+    .especialidad .cont-icon{
+        display: flex;
+    }
+    .especialidad .cont-icon img{
+        width: 50px;
+    }
+    #programacion:checked ~ .cont_btn_epecialidad .programacion, #electronica:checked ~ .cont_btn_epecialidad .electronica{
+        background: none;
+    }
+    .cont_presentacion h2{
+        font-size: 2rem;
+    }
+}
+
+@media (max-width:600px) {
+    #objetivoProg img, #objetivoElec img{
+        width: 300px;
+        height: 200px;
+    }
+}
+@media (max-width:450px) {
+    #objetivoProg img, #objetivoElec img{
+        width: 250px;
+        height: 170px;
+    }
+}
