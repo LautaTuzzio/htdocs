@@ -21,7 +21,6 @@
     include 'menu.php';
     get_active("ini");
     ?>
-    <div class="espacio_menu"></div>
     <!-- genera un espacio para que al inicio el menu no se sobreponga sobre la información -->
 
     <!-- Cuerpo de la pagina -->
