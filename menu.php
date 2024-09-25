@@ -34,7 +34,6 @@
         <img src="img/LogoEESTN1.png" alt="">
     </picture>
     <nav class="cont_nav">
-    <div class="nav" id="adm"><a href="login.php">Login</a></div>
         <div id="ini" class="nav "><a href="index.php">Inicio</a></div>
         <div id="dir" class="nav"><a href="directivos.php">Directivos</a></div>
         <div id="esp" class="nav"><a href="especialidades.php">Especialidades</a></div>
