@@ -45,7 +45,7 @@
     width: 100%;
     height: auto;
     min-height: 350px;
-    padding: 40px;
+    padding: 39px;
     box-shadow: 15px 15px 1px var(--colorFondoSlider);
     transition: all 0.3s ease;
 }
