@@ -48,7 +48,7 @@
         </div>
         <div id="sed" class="nav"><a href="sedes.php">Sedes</a></div>
         <div id="con" class="nav"><a href="contactos.php">Contactos</a></div>
-        <div id="ins" class="nav"><a href="inscripciones.php">Inscripción 2024</a></div>
+        <div id="ins" class="nav"><a href="inscripciones.php">Inscripción 2025</a></div>
     </nav>
     <div class="cont_btn_nav_lateral">
         <label for="nav_celular">
