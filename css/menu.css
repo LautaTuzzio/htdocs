@@ -1,0 +1,253 @@
+/* Estilos del menu */
+.espacio_menu{height: 100px;}
+/* --------------- Cabecera --------------- */
+/* --------------- Cabecera --------------- */
+header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100px;
+    padding: 0 50px;
+    background-color: var(--colorMenu);
+    display: flex;
+    justify-content: space-between;
+    z-index: 1;
+}
+
+
+/* --------------- Nav de PC --------------- */
+picture{
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+picture img{
+    height: 90%;
+}
+
+.cont_nav a, .cont_nav p{
+    color: white;
+    text-decoration: none;
+}
+.cont_nav{
+    display: flex;
+    gap: 20px;
+}
+.cont_nav .nav{
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.cont_nav .nav a{
+    position: relative;
+    padding: 7px 15px;
+    border-radius: 5px;
+}
+.cont_nav .nav p{
+    position: relative;
+    padding: 7px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.cont_nav .nav.active a{
+    background-color: var(--colorBtnMenu);
+    box-shadow: 0 0 5px var(--colorBtnMenu);
+}
+.cont_nav .nav .cont_sub_nav{
+    position: absolute;
+    top: 100%;
+    opacity: .5;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: all .5s ease;
+}
+.cont_nav .nav .cont_sub_nav .sub_nav{
+    background-color: var(--colorMenu);
+    width: calc(100% + 40px);
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+.cont_nav .nav:hover .cont_sub_nav{
+    opacity: 1;
+    transform: scaleY(1);
+}
+
+.cont_nav .nav > a::after, .cont_nav .nav > p::after{
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0px;
+    bottom: -2px;
+    width: 100%;
+    height: 3px;
+    background-color: var(--colorBtnMenu);
+    box-shadow: 0 0 5px var(--colorBtnMenu);
+    transform: scaleX(0);
+    transition: transform .3s ease;
+}
+.cont_nav .nav:not(.active) > a:hover::after, .cont_nav .nav > p:hover::after{
+    transform: scaleX(1);
+}
+.cont_btn_nav_lateral{
+    width: 100px;
+    height: 100px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+.cont_btn_nav_lateral label{
+    width: auto;
+    height: auto;
+    padding: 20px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.cont_btn_nav_lateral label span{
+    background-color: var(--blanco);
+    width: 50px;
+    height: 6px;
+    border-radius: 5px;
+}
+
+
+/* --------------- Nav de CELULAR --------------- */
+#nav_celular{
+    display: none;
+}
+.contenedor_nav_celular{
+    display: none;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.4);
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+.cont_nav_lateral{
+    position: fixed;
+    transform: translateX(-400px);
+    background-color: var(--colorMenu);
+    min-width: 250px;
+    width: fit-content;
+    height: 100%;
+    padding: 0 10px;
+    z-index: 3;
+    transition: transform 1s ease;
+}
+.cont_nav_lateral .cont_btn_salir{
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--blanco);
+}
+.cont_nav_lateral .cont_btn_salir label{
+    background-color: var(--colorBtnMenu);
+    width: 60px;
+    height: 60px;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px var(--colorBtnMenu);
+    transform: translateX(50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cont_nav_lateral .cont_btn_salir i{
+    font-size: 50px;
+}
+.cont_nav_lateral .nav{
+    width: 100%;
+    height: auto;
+}
+.cont_nav_lateral .nav a{
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.cont_nav_lateral .nav label{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 10px;
+}
+.cont_nav_lateral .nav label i{
+    transition: all .5s ease;
+}
+.cont_nav_lateral .nav *{
+    color: var(--blanco);
+    text-decoration: none;
+}
+.cont_nav_lateral .nav .cont_sub_nav{
+    background-color: var(--colorBtnMenu);
+    height: 0;
+    overflow: hidden;
+    padding-left: 10px;
+    transition: all .5s ease;
+}
+.cont_nav_lateral .nav .cont_sub_nav .sub_nav{
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#nav_celular:checked ~ .contenedor_nav_celular{
+    display: flex;
+}
+#nav_celular:checked ~ .cont_nav_lateral{
+    transform: translateX(0px); 
+}
+
+#sub_nav_celular{
+    display: none;
+}
+#sub_nav_celular:checked ~ .nav .cont_sub_nav{
+    height: calc(50px * 2);
+}
+#sub_nav_celular:checked ~ .nav label i{
+    transform: rotate(180deg);
+} 
+
+@media (max-width:1200px) {
+    header{
+        padding: 0 40px;
+    }
+}
+@media (max-width:1100px) {
+    header{
+        padding: 0 30px;
+    }
+    .cont_nav{
+        gap: 15px;
+    }
+}
+@media (max-width:1000px) {
+    header{
+        padding: 0 20px;
+    }
+    .cont_nav{
+        gap: 10px;
+    }
+}
+@media (max-width:960px) {
+    header{
+        padding: 0 40px;
+        flex-direction: row-reverse;
+    }
+    .cont_nav{
+        display: none;
+    }
+    .cont_btn_nav_lateral{
+        display: flex;
+    }
+}

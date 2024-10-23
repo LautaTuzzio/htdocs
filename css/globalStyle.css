@@ -1,0 +1,70 @@
+:root{
+    /* Colores basicos */
+    --negro: #000;
+    --blanco: #fff;
+
+    
+    /* Colores del header */
+    --colorFondo: #e8eef0;
+    --colorMenu: #395676;
+    --colorBtnMenu: #202f42;
+
+
+    /* Colores del main */
+    --colorFondoSlider: #5b81af;
+    --colorLinea: #446588;
+
+
+    /* Colores del footer */
+    --colorFooter: #48607c;
+    --colorLineaFooter: #6683a5;
+
+
+    /* Colores para el scroll */
+    --scrollResposo: #94a9c2;
+    --scrollHover: #5f80aa;
+    --scrollActive: #344b68;
+
+    /* Fuentes de la web */
+    --fuenteMenu: arial, cursive;
+
+    /* Color de imagen sin fondo */
+    --ImgSinfondo: #51739d;
+
+    /* Noticias */
+    --colorFondoNoticia: #bebebe;
+    --sombraNoticia: #a7a7a7;
+    --bordeNoticia: #395676;
+
+    /* Inscipciones */
+    --fondoInscripciones: #36619358;
+
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: var(--fuenteMenu);
+}
+body{
+    background-color: var(--colorFondo);
+}
+::-webkit-scrollbar{
+    background-color: var(--colorFondo);
+    width: 20px;
+}
+::-webkit-scrollbar-thumb{
+    background-color: var(--scrollResposo);
+    border: 6px solid var(--colorFondo);
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover{
+    background-color: var(--scrollHover);
+}
+::-webkit-scrollbar-thumb:active{
+    background-color: var(--scrollActive);
+}
+*::selection{
+    background-color: var(--colorBtnMenu);
+    color: var(--blanco);
+}
